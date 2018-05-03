@@ -1,6 +1,6 @@
 JSGame
 ======
-##End of JavaScript Unit
+## End of JavaScript Unit
 
 This simple game tests how quickly you can click on a shape that appears on the screen. To start the game, simply click the "Start" button". Shapes will stop appearing once you hit "Stop." 
 
