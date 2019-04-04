@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HTML, CSS, and JS Coding Playpen</title>
+        
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <style type="text/css">
+        
+            body {
+                font-family: sans-serif;
+            }
+            
+            #top-nav{
+                width: 100%;
+                height: 55px;
+                text-align:center;
+                background-color: #f5f5f5;
+                border: 3px solid #f5f5f5;
+            }
+            
+            #logo{
+                float: left;
+                margin-right: 20px;
+                
+            }
+            
+            #logo h2 {
+                position: relative;
+                margin: 0px;
+                top: 11px;
+                left: 6px;
+            }
+            
+            #frame-toggles{
+                position: relative;
+                width: 400px;
+                margin: 11px auto;
+                
+            }
+            
+            button {
+                font-size: 20px;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+            }
+            
+            #html.toggle-off {
+                border: 2px solid orange;
+                color: orange;
+            }
+            
+            #html.toggle-off:hover {
+                background-color: #e0e0e0;
+            }
+            
+            #html.toggle-on {
+                color: white;
+                background-color: orange;
+                border: 2px solid orange;
+            }
+            
+            #html.toggle-on:hover{
+                background-color: #cc8400;
+                border: 2px solid #cc8400;
+            }
+            
+            #css.toggle-off {
+                border: 2px solid blue;
+                color: blue;
+            }
+           
+            #css.toggle-off:hover {
+                background-color: #e0e0e0;
+            }
+            
+            #css.toggle-on {
+                color: white;
+                background-color: blue;
+                border: 2px solid blue;
+            }
+            
+            #css.toggle-on:hover{
+                background-color: #0000cc;
+                border: 2px solid #0000cc;
+            }
+            
+            #javascript.toggle-off {
+                border: 2px solid green;
+                color: green;
+            }
+            
+            #javascript.toggle-off:hover {
+                background-color: #e0e0e0;
+            }
+            
+            #javascript.toggle-on {
+                color: white;
+                background-color: green;
+                border: 2px solid green;
+            }
+            
+            #javascript.toggle-on:hover{
+                background-color: #004c00;
+                border: 2px solid #004c00;
+            }
+            
+            #output.toggle-off {
+                border: 2px solid black;
+                color: black;
+            }
+            
+            #output.toggle-off:hover {
+                background-color: #e0e0e0;
+            }
+            
+            #output.toggle-on {
+                color: white;
+                background-color: black;
+                border: 2px solid black;
+            }
+            
+            #output.toggle-on:hover{
+                background-color: #333333;
+                border: 2px solid #333333;
+            }
+            
+            #bodyContainer{
+                width: 100%;
+            }
+            
+            .panel {
+                color: black;
+                position: relative;
+                float: left;
+                height: 700px;
+                width: 49%;
+                resize:none;
+                border:2px solid white;
+            }
+            
+            .hidden {
+                display: none;
+            }
+            
+            #htmlPanel {
+                background-color:#ffedcc;
+            }
+            
+            #cssPanel {
+                background-color: #ccccff;
+            }
+            
+            #javascriptPanel {
+                background-color: #a3cca3;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div id="top-nav">
+            <div id="logo">
+                <h2>Coding LivePlay</h2>
+            </div>
+                <div id="frame-toggles">
+                    <button class="ui-button toggle-off toggle-on" id="html">HTML</button>
+                    <button class="ui-button toggle-off" id="css">CSS</button>
+                    <button class="ui-button toggle-off" id="javascript">JavaScript</button>
+                    <button class="ui-button toggle-off toggle-on" id="output">Output</button>
+                </div>
+        </div>
+        
+        <div id="bodyContainer">
+            <textarea id="htmlPanel" class="panel"> <p id="greeting">Hi Emily!</p> </textarea>
+            <textarea id="cssPanel" class="panel hidden"> p {color: red; font-weight: bold;} </textarea>
+            <textarea id="javascriptPanel" class="panel hidden"> document.getElementById("greeting").innerHTML = "Hi there!"  </textarea>
+            <iframe id="outputPanel" class="panel">Test</iframe>
+        
+        </div>
+    
+        <script type="text/javascript">
+            
+            $(".panel").height($(window).height() - $("#top-nav").height());
+
+            $( function() {
+                $( ".ui-button" ).on( "click", function() {
+                    $(this).toggleClass("toggle-on");
+                    var panelID = '#' + $(this).attr('id') + 'Panel';
+                    $(panelID).toggleClass("hidden");
+                    $(".panel").width(($("#bodyContainer").width()/(4 - $('.hidden').length)) - 10);
+                    
+                });
+            } );
+            
+            $(window).resize(function(){
+                $(".panel").height($(window).height() - $("#top-nav").height());
+                $(".panel").width(($("#bodyContainer").width()/(4 - $('.hidden').length)) - 10);
+
+            });
+            
+            
+            $("textarea").on('change keyup paste', function(){
+                $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+                
+                document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+            
+            });
+            
+        </script>
+
+    </body>
+
+</html>
