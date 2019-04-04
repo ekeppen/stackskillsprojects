@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <style type="text/css">
+        #loginButton {
+            border: #01CB5D solid 2px;
+            color: #01CB5D;
+        }
+        
+        #loginButton:hover{
+            background-color: #01CB5D;
+            color: white;
+        }
+        
+        #loginButton:active{
+            background-color: #0074BA;
+            border: #0074BA;
+        }
+        
+        #about {
+            text-align:center;
+        }
+        
+        #download {
+            height: 350px;
+            background-color: #0074BA;
+            text-align: center;
+        }
+        
+        #download h2{
+            color: white;
+            padding-top: 20px;
+        }
+        
+        #download h4 {
+            color: white;
+        }
+        
+        .jumbotron {
+        
+            background-image: url(jonatan-pie-620981-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        
+        
+        .jumbotron .btn {
+            background-color: #01CB5D;
+            border: #01CB5D;
+        }
+        
+        .jumbotron .btn:hover{
+            background-color: #0074BA;
+            border: #0074BA;
+        }
+        
+        .jumbotron .btn:active{
+            background-color: #0074BA;
+            border: #0074BA;
+        }
+        
+        .card-body {
+            padding-top: 5px;
+        }
+        .card-title i {
+            padding-top: 20px;
+            font-size: 300%;
+        }
+        
+        
+        @media (max-width: 991.98px){
+            body{
+                margin-top: 192px;
+            }
+        }
+        
+        @media (max-width:576px){
+            body {
+                margin-top: 284px;
+            }
+            .card-deck {
+                width: 290px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+         @media (min-width: 800px){
+            body {
+                position: relative;
+                margin-top: 136px;
+            }
+        }
+        
+        @media (min-width: 973px){
+            body {
+                margin-top: 56px;
+            }
+        }
+    
+    </style>
+    
+    
+    <title>Buenos Chaldeas!</title>
+  </head>
+  <body data-spy="scroll" data-target="#top-nav" data-offset="250">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="top-nav">
+        <a class="navbar-brand" href="#">Buenos Chaldeas</a>
+            <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#download">Download</a>
+        </li>
+        </ul>
+         <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="email" placeholder="Email">
+            <input class="form-control mr-sm-2" type="password" placeholder="Password">
+            <button class="btn my-2 my-sm-0" type="submit" id="loginButton">Log In</button>
+        </form>
+    </nav>
+    
+    <div class="jumbotron jumbotron-fluid" id="home">
+        <div class="container">
+            <h1 class="display-4">Ready to embrace FATE?</h1>
+            <p class="lead">Download the must-have app for any mage on the go!</p>
+            <p>Buenos Chaldeas is an intuitive companion for any Master investigating Singularities throughout history.</p>
+            <a class="btn btn-primary btn-lg" href="#download" role="button">Download Now</a>
+        </div>
+    </div>
+    
+    <div class="container" id="about">
+        <h2> About Buenos Chaldeas</h2>
+        <p>Buenos Chaldeas is the leading app for mages traversing Singularities and summoning Servants. It can be dangerous out there with temporal uncertaininties and raging Heroic Spirits. Here's a few ways we can help:</p>
+    
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title"><i class="far fa-smile"></i></h5>
+                <div class="card-body">
+                    <h5 class="card-title">Easy to Use</h5>
+                    <p class="card-text">No cryptic symbols or summoning circles needed! Buenos Chaldeas is made for mages of any skill level. </p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title"><i class="fas fa-tachometer-alt"></i></h5>
+                <div class="card-body">
+                    <h5 class="card-title">Lightning Fast</h5>
+                    <p class="card-text">Buenos Chaldeas is incredibly responsive, ensuring you can learn about Singularities and Servants on the fly!</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title"><i class="fas fa-sort-alpha-down"></i></h5>
+                <div class="card-body">
+                    <h5 class="card-title">Comprehensive</h5>
+                    <p class="card-text">Our crowdsourced database has details on every Servant and Singularity encountered throughout time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid" id="download">
+        <h2> Download Now</h2>
+        <h4> And start exploring all Chaldea has to offer today!</h4>
+        <br />
+        <a href="https://itunes.apple.com/app/id1183802626"><img src="App Store.png" height="75px" /></a>
+        <a href="https://play.google.com/store/apps/details?id=com.aniplex.fategrandorder.en"><img src="Play Store.png" alt="Available on the Play Store" height="75px" /></a>
+    
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
